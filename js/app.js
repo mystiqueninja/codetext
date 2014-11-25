@@ -9,8 +9,5 @@ myApp.config(['$routeProvider', function ($routeProvider) {
 	.when('/editor', {
 		templateUrl: 'partials/editor.html',
 		controller: 'editorController'
-	})
-	.otherwise({
-		redirectTo: '/editor'
 	});
 }]);

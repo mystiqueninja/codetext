@@ -19,6 +19,12 @@
 	<body>
 		<div class="container" ng-view></div>
 		<div class="container" id="editor"></div>
+		<div id="console"></div>
+
+		<input type="text" name="filePath" id="filePath">
+		<select name="fileType" id="fileType">
+			<option value="js">JavaScript</option>	
+		</select>
 
 		<button id="save" type="button">Save</button>
 		<button id="load" type="button">Load</button>
