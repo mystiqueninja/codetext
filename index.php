@@ -21,6 +21,7 @@
 		<div class="container" id="editor"></div>
 		<button id="save" type="button">Save</button>
 		<button id="load" type="button">Load</button>
+		<div></div>
 		<!-- Scripts -->
 			<script src="js/lib/jquery.min.js"></script>
 			<script src="js/editor.js"></script>
