@@ -5,28 +5,29 @@ $(function (){
 		mode: "javascript",
 		lineNumbers: true
 	});
-	console.log(myCodeMirror);
 	$("#save").on('click', function ( e ) {
 		e.preventDefault();
+		var filePath = $("input#filePath").value,
+			fileType = $("select#fileType").value;
 		$.ajax({
 			type: 'POST',
-			url: 'save.php',
-			dataType: 'text/plain',
-			data: myCodeMirror.getValue
-		})
-		.done(function ( msg ) {
-
+			url: '/functions/save.php',
+			data: {
+				fileContent: myCodeMirror.getValue(),
+				fileType: fileType,
+				filePath: filePath	
+			}
 		});
 	});
 	$("#load").on('click', function ( e ) {
 		e.preventDefault();
+		var filePath; 
 		$.ajax({
 			type: 'GET',
-			url: 'load.txt'
+			url: 'functions/load.php?filePath='+filePath
 		})
-		.done(function ( data ) {
+		.done(function ( data, msg ) {
 			myCodeMirror.setValue(data);
-
 		});
 	});
 });
