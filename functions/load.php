@@ -1,6 +1,6 @@
 <?php 
 
-$_root = "../../";
+$_root = "../";
 $_dir = $_root . $_POST['filePath'];
 
 if (file_exists($_dir)) {

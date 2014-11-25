@@ -11,7 +11,7 @@ $(function (){
 			fileType = $("select#fileType").val();
 		$.ajax({
 			type: 'POST',
-			url: 'js/functions/save.php',
+			url: 'functions/save.php',
 			data: {
 				fileContent: myCodeMirror.getValue(),
 				fileType: fileType,
@@ -26,7 +26,7 @@ $(function (){
 		var filePath = 'load.txt'; 
 		$.ajax({
 			type: 'POST',
-			url: 'js/functions/load.php',
+			url: 'functions/load.php',
 			data: {
 				filePath: filePath 
 			}
