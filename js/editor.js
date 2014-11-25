@@ -15,7 +15,7 @@ $(function (){
 			data: {
 				fileContent: myCodeMirror.getValue(),
 				fileType: fileType,
-				filePath: filePath	
+				filePath: filePath + '.' + fileType	
 			}
 		}).done(function (msg){
 			console.log(msg);
