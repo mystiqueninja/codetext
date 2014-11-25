@@ -1,0 +1,15 @@
+nav[role="settings"]{
+	padding-bottom: 5px;
+}
+nav[role="settings"] ul{
+	list-style: none;	
+}
+nav[role="settings"] ul li{
+	display: inline-block;	
+}
+
+.container{
+	width: 100%;
+	max-width: 1140px;
+	margin: auto;
+}

@@ -1,0 +1,15 @@
+[
+	{
+		"name": "JavaScript",
+		"short": "javascript",
+		"fex": [".js"],
+		"description": ""
+
+	},
+	{
+		"name": "HTML",
+		"short": "html",
+		"fex": [".html", ".htm", ".xhtml"],
+		"description": ""
+	}
+]

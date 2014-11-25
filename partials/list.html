@@ -1,0 +1,32 @@
+<section id="search-page">
+	<div class="search">
+		<label>Search: </label>
+		<input ng-model="query" placeholder="Search staff" autofocus>
+		<label>by: </label>
+		<select ng-model="staffOrder">
+			<option value="name">Name</option>
+			<option value="position">Position</option>
+		</select>
+		<br>
+		<label>
+			<input type="radio" ng-model="direction" name="direction" checked>
+			ascending
+		</label>
+		<label>
+			<input type="radio" ng-model="direction" name="direction" value="reverse">
+			descending
+		</label>
+	</div>
+	<div class="results">
+		<ul>
+			<li ng-repeat="item in staff | filter: query | orderBy: staffOrder:direction">
+				<a href="#/details/{{ staff.indexOf(item) }}">
+					<img ng-src="../Cheaphostninja/img/flag.png" alt="">
+					<h1>{{ item.name }} </h1>
+					<div class="cf"></div>
+					<p>{{ item.position }}</p>
+				</a>
+			</li>
+		</ul>
+	</div>	
+</section>

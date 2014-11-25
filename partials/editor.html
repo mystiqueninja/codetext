@@ -1,0 +1,18 @@
+<nav role="settings">
+	<ul>
+		<li>
+			<label>Language 
+				<select ng-model="editorMode" name="mode" id="mode">
+					<option ng-repeat="item in modes" value="{{ item.short }}">{{ item.name }}</option>
+				</select>
+			</label>	
+		</li>
+		<li>
+			<label>Theme 
+				<select ng-model="editorTheme" name="theme" id="theme">
+					<option ng-repeat="item in themes" value="{{ item.short }}">{{ item.name }}</option>
+				</select>
+			</label>	
+		</li>
+	</ul>
+</nav>
